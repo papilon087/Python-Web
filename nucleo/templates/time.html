@@ -1,0 +1,23 @@
+{% load static %}
+<div id="team-section" class="text-center">
+    <div class="container">
+      <div class="section-title center">
+        <h2>Nossa Equipe</h2>
+        <hr>
+        <p>Nosso time tem os melhores profissionais, nenhum caminho é longo demais quando tem a equipe certa, nossos profissionais especializados.</p>
+      </div>
+      <div id="row">
+        {% for f in Equipe %}
+        <div class="col-md-3 col-sm-6 team">
+          <div class="thumbnail"> <img src="{{ f.Foto.thumbs.url }}" alt="..." class="img-circle team-img">
+            <div class="caption">
+              <h3>{{ f.Nome }}</h3>
+              <p>{{ f.Cargo }}</p>
+              <p>{{ f.Bio }}</p>
+            </div>
+          </div>
+        </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>

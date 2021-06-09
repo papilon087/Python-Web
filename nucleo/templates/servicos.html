@@ -1,0 +1,21 @@
+{% load static %}
+<div id="services-section" class="text-center">
+    <div class="container">
+      <div class="section-title center">
+        <h2>Nossos Serviços</h2>
+        <hr>
+        <div class="clearfix"></div>
+        <p>Não se preocupe, nós cuidaremos de tudo pra você, nosso serviços disponíveis para melhor lhe atender.</p>
+      </div>
+      <div class="space"></div>
+      {% for s in Servico %}
+      <div class="row">
+        <div class="col-md-3 col-sm-6 service"> <i class="fa fa-desktop"></i>
+          <h4>{{ s.Nome }}</h4>
+          <p>{{ s.Descricao }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
